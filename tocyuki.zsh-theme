@@ -7,7 +7,7 @@ ZSH_THEME_GIT_PROMPT_MODIFIED=$(str_with_color yellow '*')
 ZSH_THEME_GIT_PROMPT_DELETED=$(str_with_color red 'x')
 ZSH_THEME_GIT_PROMPT_RENAMED=$(str_with_color blue 'o')
 ZSH_THEME_GIT_PROMPT_UNMERGED=$(str_with_color magenta '!')
-ZSH_THEME_GIT_PROMPT_UNTRACKED=$(str_with_color white '?')
+ZSH_THEME_GIT_PROMPT_UNTRACKED=$(str_with_color green '?')
 
 function my_git_status() {
   [ $(current_branch) ] && echo "($(current_branch)$(git_prompt_status))"
@@ -19,7 +19,6 @@ USER_NAME=$(str_with_color cyan '%n')
 HOST_NAME=$(str_with_color yellow '%m')
 CURRENT_DIRECTORY=$(str_with_color green '%~')
 PROMPT_CHAR=$(str_with_color red '➜ ')
-PROMPT='${PROMPT_PREFIX} ${USER_NAME} at ${HOST_NAME} in ${CURRENT_DIRECTORY} $(my_git_status) [$
-{DATE_TIME}]
+PROMPT='${PROMPT_PREFIX} ${USER_NAME} at ${HOST_NAME} in ${CURRENT_DIRECTORY} $(my_git_status) [${DATE_TIME}]
 $PROMPT_CHAR'
 PROMPT2=$(str_with_color white '> ')
