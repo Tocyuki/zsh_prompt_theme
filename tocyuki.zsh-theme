@@ -10,7 +10,7 @@ ZSH_THEME_GIT_PROMPT_UNMERGED=$(str_with_color magenta '!')
 ZSH_THEME_GIT_PROMPT_UNTRACKED=$(str_with_color green '?')
 
 function my_git_status() {
-  [ $(current_branch) ] && echo $(str_with_color cyan "git-($(current_branch)$(git_prompt_status))")
+  [ $(current_branch) ] && echo "git-($(current_branch)$(git_prompt_status))"
 }
 
 DATE_TIME=$(str_with_color white '%D{%m-%d %K:%M:%S}')
